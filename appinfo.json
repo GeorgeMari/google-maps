@@ -1,12 +1,12 @@
 {
-	"id": "cz.72ka.googlemaps",
-	"version": "0.3.6",
-	"vendor": "72ka",
+	"id": "com.georgemari.mojomapsforgoogle",
+	"version": "0.3.7",
+	"vendor": "georgemari",
 	"type": "web",
 	"noDeprecatedStyles": true,
 	"theme": "light",
 	"main": "index.html",
-	"title": "Google Maps",
+	"title": "Mojo Maps for Google",
 	"icon": "icon.png",
 	"splashicon": "icon-256x256.png",
 	"uiRevision": "2",
@@ -18,8 +18,8 @@
     ],	
 	"universalSearch":{
 			  	"search" :  {
-    				  "displayName":"Google Maps",
-    				  "url":"cz.72ka.googlemaps",
+    				  "displayName":"Mojo Maps for Google",
+    				  "url":"com.georgemari.mojomapsforgoogle",
     				  "launchParam":{"target":"maploc:#{searchTerms}"}
   					}
   			}

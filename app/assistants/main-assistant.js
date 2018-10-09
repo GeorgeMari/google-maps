@@ -1032,7 +1032,7 @@ this.feedMenuModel = {
       items: [
 		  //{template:'main/top-bar-template'},
 		  {},
-          { label: $L("Google Maps"), command: 'searchPlaces', width: this.restmenuwidth},
+          { label: $L("Mojo Maps"), command: 'searchPlaces', width: this.restmenuwidth},
           { iconPath: "images/layers.png", command: 'maptype', label: $L('M')},
           {label: $L('MyLoc'), iconPath:'images/menu-icon-mylocation.png', command:'MyLoc', disabled: true},
           {}
@@ -1167,7 +1167,7 @@ if (this.devfakegps) {
 			var velocity = this.getVelocityFromGPS(gps.velocity);
 			this.SetTopMenuText(velocity);
 		} else {
-			this.SetTopMenuText($L("Google Maps"));
+			this.SetTopMenuText($L("Mojo Maps"));
 		};
 	} else {
 		this.pulseDot(this.MyLocation); //checked that this is not a memory eater
@@ -1364,7 +1364,7 @@ mousedownInterruptsFollow: function () {
 	this.controller.modelChanged(this.feedMenuModel);
 	
 	//set default text to the top menu
-	this.SetTopMenuText($L("Google Maps"));
+	this.SetTopMenuText($L("Mojo Maps"));
 	
 	//turn back the compass
 	this.compassRotate(this.idleCompassDeg);
@@ -2879,7 +2879,7 @@ mapClear: function() {
 	 this.controller.get("DestinationSearchField").value = "";
 
 	 //reset the view menu text
-     this.feedMenuModel.items[1].items[1].label = $L("Google Maps");
+     this.feedMenuModel.items[1].items[1].label = $L("Mojo Maps");
      this.controller.modelChanged(this.feedMenuModel);
 },
 

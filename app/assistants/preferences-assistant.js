@@ -50,6 +50,25 @@ document.getElementById("MapCacheInfoText").innerHTML = $L("Enables smart cachin
 document.getElementById("MapCachePathText").innerHTML = $L("Use MappingTool cache");
 document.getElementById("MapCachePathInfoText").innerHTML = $L("If enabled, the map use the MappingTool cache in /media/internal/.MapTool directory");
 
+// API Key field
+this.controller.setupWidget("APIKeyField",
+	this.APIKeyFieldAttributes = {
+		multiline:		false,
+		autoFocus:		false,
+		autoReplace:	false,
+		holdToEdit:		true,
+		textCase:		Mojo.Widget.steModeLowerCase,
+		enterSubmits:	false
+		},
+	this.APIKeyFieldModel = {
+		value : "",
+		disabled: false
+	}
+);
+this.handleAPIKeyFieldHandler = this.handleAPIKeyField.bindAsEventListener(this);
+Mojo.Event.listen(this.controller.get("APIKeyField"), Mojo.Event.propertyChange, this.handleAPIKeyFieldHandler);
+
+
 // Fullscreen toggle button
 this.controller.setupWidget("FullscreenToggle",
   this.FullscreenToggleAttributes = {
@@ -311,6 +330,7 @@ activate: function() {
 setPrefsWidgets: function(Preferences) {
 	
 	/* Set the widgets to their values */
+  this.APIKeyFieldModel.value = Preferences.APIKey;
   this.FullscreenToggleModel.value = Preferences.Fullscreen;
   this.RotateToggleModel.value = Preferences.MapRotate;
   this.MapCacheToggleModel.value = Preferences.MapCache;
@@ -342,6 +362,11 @@ handleCommand: function(event) {
                 }
                 
 
+},
+
+handleAPIKeyField: function(event) {
+	this.Preferences.APIKey = event.model.value;
+	this.PrefsCookie.put(this.Preferences);
 },
 
 handleFullscreenToggle: function(event) {

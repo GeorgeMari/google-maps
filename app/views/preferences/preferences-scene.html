@@ -7,12 +7,24 @@
 
 <div class="palm-group">
     <div class="palm-group-title"><span id="GeneralText">General</span></div>
-        <div class="palm-list">
-        	<div class="palm-row multi-line first">
-                       <div x-mojo-element="ToggleButton" id="FullscreenToggle"></div>
-                       <div class="title left" id="FullscreenModeText">Fullscreen Mode</div>
-					   <div class="palm-info-text" id="FullscreenModeInfoText">Change needs application restart. Remember, app menu will be available only in non-fullscreen.<br><br></div>
+    	<div class="palm-list">
+      	<div class="palm-row multi-line first">
+     		<div class="title left" id="APIKeyText">Your Google API Key</div>
+			<div class="palm-row single" id="apikey-row">
+					<div class="palm-row-wrapper textfield-group" x-mojo-focus-highlight="true">
+						<div class="title">
+							<div class="label">API Key</div>
+            			<div x-mojo-element="PasswordField" id="APIKeyField"><br></div>
+						</div>
+					</div>
 			</div>
+			<div class="palm-info-text" id="APIKeyInfoText">Google now charges for access to their Maps API.  You must sign up for your own API key.<br><br></div>
+ 			</div>
+	        	<div class="palm-row multi-line">
+            	<div x-mojo-element="ToggleButton" id="FullscreenToggle"></div>
+               <div class="title left" id="FullscreenModeText">Fullscreen Mode</div>
+					<div class="palm-info-text" id="FullscreenModeInfoText">Change needs application restart. Remember, app menu will be available only in non-fullscreen.<br><br></div>
+				</div>
 			<div class="palm-row multi-line">
 				<table>
 					<tr>

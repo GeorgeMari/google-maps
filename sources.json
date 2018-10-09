@@ -3,7 +3,7 @@
         "source": "app/assistants/stage-assistant.js"
     }, 
     {
-        "source": "app/assistants/main-assistant-min.js", 
+        "source": "app/assistants/main-assistant.js", 
         "scenes": "main"
     },  
     {
@@ -45,5 +45,8 @@
     },
     {
     	"source": "javascript/markerclusterer/markerclusterer_compiled.js"
-    }
+    },
+	{
+		"source": "javascript/base64/base64.js"
+	}
 ]

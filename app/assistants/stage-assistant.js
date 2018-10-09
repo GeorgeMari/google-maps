@@ -9,6 +9,7 @@ Cookies.MapCookie = new Mojo.Model.Cookie('MapCookie');
 Cookies.TrafficCookie = new Mojo.Model.Cookie('TrafficCookie');
 Cookies.PrefsCookie = new Mojo.Model.Cookie('PrefsCookie');
 var DefaultPreferences = {
+		APIKey: "TestKey",
 		Fullscreen: false,
 		MapRotate: false,
 		MaptoOverride: false,

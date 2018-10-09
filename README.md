@@ -1,8 +1,12 @@
 Google Maps
 ===========
 
-Homebrew Google Maps for webOS (javascript API v3)
+Homebrew Google Maps for Mojo/webOS (javascript API)
 
+This application was forked from 72ka's excellent Google Maps for webOS.  That app did not use an API key to access the Google Maps API, which Google began enforcing in late summer of 2018.  The renamed app, Mojo Maps for Google, allows the user to enter their own Google Maps API key, which they must sign up for with Google.  The user must enter a credit card when signing up with Google for this API key, but as of 2018, a $200 credit per month is provided by Google, which seems to allow for most personal uses.
+
+George Mari
+================================================================================================================================
 This application is trying to be a replacement of unsupported Google Maps application for WebOS devices. The application is based on the Google API V3. Development goal is to get all the features available in API on our WebOS devices and a little more, while maintaining compatibility to the oldest devices with WebOS 1.4.5 up to the newest devices like HP Touchpad. The application seeks to offer a simple and clean user interface. If you like this application, you can donate me in "About" menu.
 
 
