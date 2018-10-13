@@ -28,7 +28,7 @@
 		var MapsURLPart1 = "https://maps.googleapis.com/maps/api/js";
 		var MapsURLPartAPIKey = "?key=";
 		var APIKey = "";
-		var MapsURLPart2 = "&libraries=places,weather,geometry";
+		var MapsURLPart2 = "&libraries=places,weather,geometry&language=";
 
 		// Load Language from Preferences, if is set, override previous API Locale
 		var PreferencesCookie = new Mojo.Model.Cookie('PrefsCookie');
@@ -52,10 +52,6 @@
 		catch (error) {
 			// We didn't find the API Key in preferences.  What should we do?
 		};
-
-		// Eventually, the API Key will be stored encrypted and we will have to decrypt it.
-		// Construct the MapsURL.
-		MapsURL = MapsURLPart1 + MapsURLPartAPIKey + APIKey + MapsURLPart2;
 
 		var pre3hack = " ,width=device-width'>";
 		if(Mojo.Environment.DeviceInfo.screenWidth==480 || Mojo.Environment.DeviceInfo.screenWidth==800 ){
@@ -85,6 +81,8 @@
 		
 		//var MapsURL = "http://maps.google.com/maps/api/js" + gAPI + "&libraries=places,weather,geometry&language=" + MapsLocale;
 		//var MapsURL = "http://maps.google.com/maps/api/js?v=3.exp&signed_in=true&libraries=places,weather,panoramio,geometry&language=cs";
+		// Construct the MapsURL.
+		MapsURL = MapsURLPart1 + MapsURLPartAPIKey + APIKey + MapsURLPart2 + MapsLocale;
 		var scriptTag = "<script type='text/javascript' src='" + MapsURL + "'\><\/script>";
 		document.write(scriptTag);
 

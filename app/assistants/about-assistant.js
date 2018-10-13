@@ -6,8 +6,8 @@ AboutAssistant.prototype = {
 
 //setup localized text and variables
 $("AppTitleText").innerHTML = $L(Mojo.Controller.appInfo.title);
-$("AppVersionText").innerHTML = Mojo.Controller.appInfo.version + ", " + $L("by") + " Jan Heřman (72ka) - (API v" + google.maps.version + ")";
-$("AppDescription").innerHTML = $L("This application is trying to be a replacement of unsupported Google Maps application for WebOS devices. The application is based on the Google Maps API V3. Do you like this application? If do, you can support me in development. Thank you!");
+$("AppVersionText").innerHTML = Mojo.Controller.appInfo.version + ", " + $L("by") + " George Mari - (API v" + google.maps.version + ")";
+$("AppDescription").innerHTML = $L("This application is trying to be a replacement of unsupported Google Maps application for WebOS devices.");
 $("ChangelogText").innerHTML = $L("Changelog");
 $("DescriptionText").innerHTML = $L("Description");
 $("ContributorsText").innerHTML = $L("Contributors");
